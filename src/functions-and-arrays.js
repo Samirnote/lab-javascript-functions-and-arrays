@@ -162,7 +162,18 @@ return wordsUni;
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, isWord) {
+
+
+  if (wordsFind.length===0){  
+    return null;
+  };
+
+
+   return  wordsFind.includes(isWord) ? true : false ; 
+      
+
+}
 
 
 
@@ -181,7 +192,27 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordsCount, manyTime) {
+
+  let j=0;
+
+  if (wordsCount.length===0 || !wordsCount.includes(manyTime)){  
+    return 0;
+  };
+ 
+   for (let i =0; i < wordsCount.length; i++) {
+        
+        if (wordsCount[i] === manyTime) {
+
+         j=j+1;
+
+        }
+
+   }
+
+   return  j; 
+
+}
 
 
 
@@ -209,7 +240,21 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  let bigChar = [];
+  for (let i =0; i < matrix.length; i++) {
+    const arr = matrix[i];  
+    for (let j =0; j < matrix.length; j++) {
+      
+      bigChar.push(arr[j]*arr[j+1]*arr[j+2]*arr[j+3]);
+
+    }
+
+}
+
+return  (Math.max(bigChar)); 
+
+}
 
 
 
